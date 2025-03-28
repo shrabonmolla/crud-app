@@ -17,7 +17,7 @@ function User() {
   const deleteUser = async (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        await axios.delete(`http://localhost:5000/users/${id}`);
+        await axios.delete(`https://crud-app-9pm8.onrender.com/users/${id}`);
         setUsers(users.filter(user => user._id !== id)); // Remove user from state
         alert("User deleted successfully!");
       } catch (error) {
