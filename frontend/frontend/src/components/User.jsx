@@ -8,7 +8,7 @@ function User() {
   // Fetch users from the database
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users")
+      .get("https://crud-app-9pm8.onrender.com/users")
       .then((response) => setUsers(response.data))
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
