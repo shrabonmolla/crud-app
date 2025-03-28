@@ -15,7 +15,7 @@ function Updateuser() {
   // ✅ Fetch existing user data when component loads
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/users/${id}`)
+      .get(`https://crud-app-9pm8.onrender.com/users/${id}`)
       .then((response) => setUser(response.data))
       .catch((error) => console.error("Error fetching user:", error));
   }, [id]);
@@ -29,7 +29,7 @@ function Updateuser() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/users/${id}`, user);
+      await axios.put(`https://crud-app-9pm8.onrender.com/users/${id}`, user);
       alert("User updated successfully!");
       navigate("/"); // Redirect to home page
     } catch (error) {
