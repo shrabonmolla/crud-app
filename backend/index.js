@@ -89,11 +89,7 @@ app.get("/users/:id", async (req, res) => {
 });
 
 
-// Delete user
-app.delete("/users/:id", async (req, res) => {
-  await User.findByIdAndDelete(req.params.id);
-  res.json({ message: "User deleted" });
-});
+
 
 
 
