@@ -11,7 +11,7 @@ function Createuser() {
     console.log("submitted");
 
     try {
-      const res = await axios.post("http://localhost:5000/add-user", {
+      const res = await axios.post("https://crud-app-9pm8.onrender.com/add-user", {
         color,
         category,
         price,
